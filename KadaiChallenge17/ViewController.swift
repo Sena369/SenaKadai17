@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     ]
     private var editIndexPath: IndexPath?
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +62,15 @@ extension ViewController: UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            itemList.remove(at: indexPath.row)
+        }
+        tableView.reloadData()
+    }
 }
 
 extension ViewController: UITableViewDelegate {
@@ -74,29 +83,20 @@ extension ViewController: UITableViewDelegate {
         editIndexPath = indexPath
         presentAddItemViewController(mode: .rename(itemList[indexPath.row].name))
     }
-
-    func tableView(_ tableView: UITableView,
-                   commit editingStyle: UITableViewCell.EditingStyle,
-                   forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            itemList.remove(at: indexPath.row)
-        }
-        tableView.reloadData()
-    }
 }
 
 extension ViewController: EditItemListDelegate {
     func addDidSave(item: CheckItem) {
         itemList.append(item)
-        tableView.reloadData()
         dismiss(animated: true)
+        tableView.reloadData()
     }
 
     func editDidSave(name: String) {
         guard let editIndexPath = editIndexPath else { return }
         itemList[editIndexPath.row].name = name
-        tableView.reloadRows(at: [editIndexPath], with: .automatic)
         dismiss(animated: true)
+        tableView.reloadRows(at: [editIndexPath], with: .automatic)
     }
 
     func didCancel() {

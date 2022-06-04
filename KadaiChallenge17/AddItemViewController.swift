@@ -17,7 +17,7 @@ class AddItemViewController: UIViewController {
     weak var delegate: EditItemListDelegate?
     private var mode: Mode?
 
-    @IBOutlet weak var itemTextField: UITextField!
+    @IBOutlet private weak var itemTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()

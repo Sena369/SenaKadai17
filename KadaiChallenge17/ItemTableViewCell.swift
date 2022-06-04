@@ -13,8 +13,8 @@ class ItemTableViewCell: UITableViewCell {
     static var nib: UINib { UINib(nibName: String(describing: self),
                                   bundle: nil)}
 
-    @IBOutlet weak var checkImageView: UIImageView!
-    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet private weak var checkImageView: UIImageView!
+    @IBOutlet private weak var itemLabel: UILabel!
 
     func configure(item: CheckItem) {
         itemLabel.text = item.name
