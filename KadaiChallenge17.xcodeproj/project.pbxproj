@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		377AB404B1BF8D8A4B2CD8F8 /* Pods_KadaiChallenge17.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287A797BA2AB876ACCE68A2A /* Pods_KadaiChallenge17.framework */; };
+		D346EE74284ACE0F0086A2AE /* CheckItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346EE73284ACE0F0086A2AE /* CheckItem.swift */; };
+		D346EE77284ACE5C0086A2AE /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346EE75284ACE5C0086A2AE /* ItemTableViewCell.swift */; };
+		D346EE78284ACE5C0086A2AE /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D346EE76284ACE5C0086A2AE /* ItemTableViewCell.xib */; };
+		D346EE7A284AD0B80086A2AE /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D346EE79284AD0B80086A2AE /* AddItemViewController.swift */; };
+		D346EE7C284AD0CB0086A2AE /* AddItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D346EE7B284AD0CB0086A2AE /* AddItem.storyboard */; };
 		D3E8C4582847564900798E5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8C4572847564900798E5C /* AppDelegate.swift */; };
 		D3E8C45A2847564900798E5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8C4592847564900798E5C /* SceneDelegate.swift */; };
 		D3E8C45C2847564900798E5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8C45B2847564900798E5C /* ViewController.swift */; };
@@ -20,6 +25,11 @@
 		287A797BA2AB876ACCE68A2A /* Pods_KadaiChallenge17.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KadaiChallenge17.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D9B1040D15FBD4CFB6CD6B /* Pods-KadaiChallenge17.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KadaiChallenge17.release.xcconfig"; path = "Target Support Files/Pods-KadaiChallenge17/Pods-KadaiChallenge17.release.xcconfig"; sourceTree = "<group>"; };
 		A6B35F88AE851063A47BF437 /* Pods-KadaiChallenge17.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KadaiChallenge17.debug.xcconfig"; path = "Target Support Files/Pods-KadaiChallenge17/Pods-KadaiChallenge17.debug.xcconfig"; sourceTree = "<group>"; };
+		D346EE73284ACE0F0086A2AE /* CheckItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckItem.swift; sourceTree = "<group>"; };
+		D346EE75284ACE5C0086A2AE /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		D346EE76284ACE5C0086A2AE /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		D346EE79284AD0B80086A2AE /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		D346EE7B284AD0CB0086A2AE /* AddItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddItem.storyboard; sourceTree = "<group>"; };
 		D3E8C4542847564900798E5C /* KadaiChallenge17.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KadaiChallenge17.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E8C4572847564900798E5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E8C4592847564900798E5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,9 +93,14 @@
 				D3E8C4572847564900798E5C /* AppDelegate.swift */,
 				D3E8C4592847564900798E5C /* SceneDelegate.swift */,
 				D3E8C45B2847564900798E5C /* ViewController.swift */,
+				D346EE79284AD0B80086A2AE /* AddItemViewController.swift */,
+				D346EE75284ACE5C0086A2AE /* ItemTableViewCell.swift */,
+				D346EE73284ACE0F0086A2AE /* CheckItem.swift */,
 				D3E8C45D2847564900798E5C /* Main.storyboard */,
-				D3E8C4602847564A00798E5C /* Assets.xcassets */,
+				D346EE7B284AD0CB0086A2AE /* AddItem.storyboard */,
+				D346EE76284ACE5C0086A2AE /* ItemTableViewCell.xib */,
 				D3E8C4622847564A00798E5C /* LaunchScreen.storyboard */,
+				D3E8C4602847564A00798E5C /* Assets.xcassets */,
 				D3E8C4652847564A00798E5C /* Info.plist */,
 			);
 			path = KadaiChallenge17;
@@ -151,6 +166,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D346EE78284ACE5C0086A2AE /* ItemTableViewCell.xib in Resources */,
+				D346EE7C284AD0CB0086A2AE /* AddItem.storyboard in Resources */,
 				D3E8C4642847564A00798E5C /* LaunchScreen.storyboard in Resources */,
 				D3E8C4612847564A00798E5C /* Assets.xcassets in Resources */,
 				D3E8C45F2847564900798E5C /* Main.storyboard in Resources */,
@@ -208,7 +225,10 @@
 			files = (
 				D3E8C45C2847564900798E5C /* ViewController.swift in Sources */,
 				D3E8C4582847564900798E5C /* AppDelegate.swift in Sources */,
+				D346EE77284ACE5C0086A2AE /* ItemTableViewCell.swift in Sources */,
 				D3E8C45A2847564900798E5C /* SceneDelegate.swift in Sources */,
+				D346EE74284ACE0F0086A2AE /* CheckItem.swift in Sources */,
+				D346EE7A284AD0B80086A2AE /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
